@@ -1,7 +1,7 @@
 # Real_world_Machine_Learning_Project
 This repository contains machine learning project from data exploration to comparaison of different models to final model tuning and validation and interpretation to deployement with plotly dash
 
-# 🛠️ Machine Learning Portfolio
+#  Machine Learning Portfolio
 
 A curated collection of production-ready machine learning repositories. Each project spans the entire lifecycle—from exploratory data analysis and feature engineering to model training, rigorous validation, model interpretation, and interactive deployment.
 
