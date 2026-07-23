@@ -1,5 +1,5 @@
 import streamlit as st
-
+import os
 def render_executive_summary():
     # Inject Custom CSS for dark-theme card components with elevated shadows
     st.markdown("""
@@ -57,7 +57,8 @@ def render_executive_summary():
     # Centered image layout using columns
     img_col1, img_col2, img_col3 = st.columns([1, 2, 1])
     with img_col2:
-        st.image("assets/churn.png", use_container_width=True)
+        image_path = os.path.join(BASE_DIR, "assets", "churn.png")
+        st.image(image_path, use_container_width=True)
 
     st.markdown("<div style='margin: 15px 0;'></div>", unsafe_allow_html=True)
 
