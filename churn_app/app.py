@@ -2,7 +2,7 @@ import sys
 import joblib
 import pandas as pd
 import streamlit as st
-
+BASE_DIR = Path(__file__).resolve().parent
 # 1. Import utility components & views from utils package
 from utils import (
     ChurnFeatureEngineer, 
