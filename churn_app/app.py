@@ -31,7 +31,8 @@ def load_pipeline():
     
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data.csv")
+    data_path = BASE_DIR / "data.csv"
+    df = pd.read_csv(data_path)
     if 'TotalCharges' in df.columns:
         df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     return df
