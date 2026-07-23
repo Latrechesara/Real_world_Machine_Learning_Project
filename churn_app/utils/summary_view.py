@@ -1,5 +1,8 @@
 import streamlit as st
 import os
+# Point to churn_app directory (one level up from utils)
+UTILS_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(UTILS_DIR)
 def render_executive_summary():
     # Inject Custom CSS for dark-theme card components with elevated shadows
     st.markdown("""
