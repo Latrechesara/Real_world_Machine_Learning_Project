@@ -25,8 +25,10 @@ st.set_page_config(
 # 4. Resource Caching Loaders
 @st.cache_resource
 def load_pipeline():
-    return joblib.load("champion_svm_pipeline.pkl")
-
+    # Points directly to churn_app/champion_svm_pipeline.pkl
+    model_path = BASE_DIR / "champion_svm_pipeline.pkl"
+    return joblib.load(model_path)
+    
 @st.cache_data
 def load_data():
     df = pd.read_csv("data.csv")
