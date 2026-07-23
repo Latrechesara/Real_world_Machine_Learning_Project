@@ -1,9 +1,13 @@
+import os
 import sys
 import joblib
 import pandas as pd
 import streamlit as st
-BASE_DIR = Path(__file__).resolve().parent
-# 1. Import utility components & views from utils package
+
+# 1. Base directory anchor using os.path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Import utility components & views from utils package
 from utils import (
     ChurnFeatureEngineer, 
     plot_local_shap, 
@@ -11,10 +15,10 @@ from utils import (
     render_eda_view
 )
 
-# 2. Register custom transformer class to __main__ for seamless joblib unpickling
+# 3. Register custom transformer class to __main__ for seamless joblib unpickling
 sys.modules['__main__'].ChurnFeatureEngineer = ChurnFeatureEngineer
 
-# 3. Streamlit Page Configuration
+# 4. Streamlit Page Configuration
 st.set_page_config(
     page_title="Telecom Churn Intelligence Platform",
     page_icon="📞",
@@ -22,21 +26,21 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 4. Resource Caching Loaders
+# 5. Resource Caching Loaders
 @st.cache_resource
 def load_pipeline():
     # Points directly to churn_app/champion_svm_pipeline.pkl
-    model_path = BASE_DIR / "champion_svm_pipeline.pkl"
+    model_path = os.path.join(BASE_DIR, "champion_svm_pipeline.pkl")
     return joblib.load(model_path)
-    
+
 @st.cache_data
 def load_data():
-    data_path = BASE_DIR / "data.csv"
+    # Points directly to churn_app/data.csv
+    data_path = os.path.join(BASE_DIR, "data.csv")
     df = pd.read_csv(data_path)
     if 'TotalCharges' in df.columns:
         df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     return df
-
 # Load Assets
 try:
     pipeline = load_pipeline()
