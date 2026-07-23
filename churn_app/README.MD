@@ -1,12 +1,13 @@
 # 📞 Telecom Churn Intelligence Platform
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io) **[🚀 Launch Live Demo App](https://share.streamlit.io)**
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churnapp-clohhlrh9yqntg3nqwnkv4.streamlit.app/) **[🚀 Launch Live Demo App](https://churnapp-clohhlrh9yqntg3nqwnkv4.streamlit.app/)**
+
+An interactive Machine Learning dashboard built with **Streamlit**, **Scikit-Learn**, **SHAP**, and **Plotly** to analyze customer retention, perform EDA, and generate explainable churn predictions.
 
 
 
 An interactive Machine Learning dashboard built with **Streamlit**, **Scikit-Learn**, **SHAP**, and **Plotly** to analyze customer retention, perform EDA, and generate explainable churn predictions.
 
-![App Banner](churn_app/assets/churn.png)
 
 ---
 
@@ -19,28 +20,6 @@ An interactive Machine Learning dashboard built with **Streamlit**, **Scikit-Lea
 
 ---
 
-## 🏗️ Project Structure
-
-```text
-churn_app/
-├── assets/
-│   └── churn.png
-├── notebooks/
-│   ├── assets/
-│   ├── 1-Exploratory_Data_Analysis.ipynb
-│   ├── 2-Model_training_comparaison.ipynb
-│   └── 3-Final_pipeline_fine_tuning.ipynb
-├── utils/
-│   ├── __init__.py
-│   ├── eda_view.py
-│   ├── explainability.py
-│   ├── feature_engineering.py
-│   ├── prediction_view.py
-│   └── summary_view.py
-├── app.py
-├── champion_svm_pipeline.pkl
-├── data.csv
-└── requirements.txt
 
 📓 Notebooks
 The research pipeline spans three sequential notebooks covering exploratory data analysis, comparative
