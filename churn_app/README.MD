@@ -1,6 +1,7 @@
 # 📞 Telecom Churn Intelligence Platform
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churnapp-clohhlrh9yqntg3nqwnkv4.streamlit.app/)
+
 **[🚀 Launch Live Demo App](https://churnapp-clohhlrh9yqntg3nqwnkv4.streamlit.app/)**
 
 An interactive Machine Learning dashboard built with **Streamlit**, **Scikit-Learn**, **SHAP**, and **Plotly** to analyze customer retention, perform EDA, and generate explainable churn predictions.
